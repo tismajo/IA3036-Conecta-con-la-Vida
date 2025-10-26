@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Conecta con la Vida 🎲</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <header>
+        <h1>🎲 Conecta con la Vida</h1>
+        <p>Basado en la Comunicación No Violenta de Marshall Rosenberg</p>
+    </header>
+
+    <main>
+        <!-- SECCIÓN DE CONFIGURACIÓN -->
+        <section id="configuracion">
+        <h2>Configuración del Juego</h2>
+        <form id="form-jugadores">
+            <label for="num-jugadores">Número de jugadores:</label>
+            <select id="num-jugadores" required>
+            <option value="" disabled selected>Selecciona</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            </select>
+            <button type="submit">Iniciar Juego</button>
+        </form>
+        </section>
+
+        <!-- TABLERO -->
+        <section id="tablero-section" aria-label="Tablero de juego" class="oculta">
+        <div id="tablero"></div>
+        </section>
+
+        <!-- INFORMACIÓN DEL JUGADOR -->
+        <aside id="info-jugador" class="oculta">
+        <h2 id="titulo-jugador">Turno del Jugador 1</h2>
+        <p>Posición: <span id="posicion">1</span>/30</p>
+        <p>Conexiones de Vida: <span id="conexiones">0</span>/4</p>
+        <button id="lanzar-dado">🎲 Lanzar dado</button>
+        <p id="resultado-dado"></p>
+        </aside>
+
+        <!-- CARTAS -->
+        <section id="carta-section" aria-label="Cartas de desafío" class="oculta">
+        <h2>Carta de Desafío</h2>
+        <div id="carta" class="oculta"></div>
+        <button id="siguiente-turno" class="oculta">Siguiente turno</button>
+        </section>
+
+        <!-- INSTRUCCIONES -->
+        <section id="instrucciones">
+        <h2>📖 Instrucciones del Juego</h2>
+        <button id="toggle-instrucciones">Mostrar / Ocultar</button>
+        <div id="texto-instrucciones" class="oculta">
+            <p>Objetivo: Lograr las 4 “Conexiones de Vida” practicando los pasos de la Comunicación No Violenta (CNV): observar sin juzgar, expresar sentimientos, reconocer necesidades y hacer peticiones claras.</p>
+            <ul>
+            <li>Cada jugador lanza el dado en su turno y avanza su ficha.</li>
+            <li>Según el color de la casilla, tomará una carta de desafío correspondiente.</li>
+            <li>Si responde correctamente, gana una semilla de compasión.</li>
+            <li>Al reunir las 4 semillas, obtiene una Conexión de Vida.</li>
+            <li>El primer jugador con 4 Conexiones de Vida gana.</li>
+            </ul>
+            <p>Casillas especiales 🖤 “Bloqueo de la Compasión”: el jugador debe reformular una frase en lenguaje CNV para no perder turno.</p>
+        </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>Juego educativo inspirado en la Comunicación No Violenta © 2025</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

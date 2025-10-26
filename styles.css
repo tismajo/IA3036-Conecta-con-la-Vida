@@ -1,0 +1,124 @@
+:root {
+  --verde: #6ac17b;
+  --azul: #6ba8e5;
+  --amarillo: #f8d46e;
+  --rojo: #f27c7c;
+  --negro: #444;
+  --blanco: #fff;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  background: #fafafa;
+  color: #222;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+header {
+  background: linear-gradient(90deg, var(--verde), var(--azul));
+  color: var(--blanco);
+  width: 100%;
+  padding: 1rem;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  margin: 1rem auto;
+  max-width: 1000px;
+}
+
+#tablero {
+  display: grid;
+  grid-template-columns: repeat(6, 70px);
+  grid-gap: 8px;
+  justify-content: center;
+  position: relative;
+}
+
+.casilla {
+  width: 70px;
+  height: 70px;
+  border-radius: 10px;
+  color: #fff;
+  font-weight: bold;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  position: relative;
+  font-size: 0.9rem;
+  padding-bottom: 4px;
+}
+
+.casilla .ficha {
+  position: absolute;
+  top: 5px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 1.6rem;
+}
+
+.verde { background: var(--verde); }
+.azul { background: var(--azul); }
+.amarillo { background: var(--amarillo); color: #333; }
+.rojo { background: var(--rojo); }
+.negro { background: var(--negro); }
+
+#info-jugador, #configuracion, #instrucciones {
+  background: #fff;
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+#carta {
+  background: #fff;
+  border-radius: 10px;
+  padding: 1rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  min-height: 120px;
+  width: 320px;
+  margin: 0 auto;
+}
+
+.oculta { display: none; }
+
+button {
+  background: var(--azul);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  font-size: 1rem;
+  margin-top: 10px;
+  transition: background 0.2s;
+}
+
+button:hover {
+  background: var(--verde);
+}
+
+footer {
+  margin-top: 2rem;
+  font-size: 0.9rem;
+  color: #555;
+}
+
+#texto-instrucciones {
+  text-align: left;
+  margin-top: 1rem;
+}
+
+.respuesta {
+  background: #f0f0f0;
+  border-radius: 8px;
+  padding: 0.5rem;
+  margin-top: 1rem;
+}

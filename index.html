@@ -3,24 +3,24 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Conecta con la Vida 🎲</title>
-    <link rel="stylesheet" href="style.css" />
+    <title>Conecta con la Vida</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="icon" href="dice-icon.png" />
 </head>
 <body>
     <header>
-        <h1>🎲 Conecta con la Vida</h1>
-        <p>Basado en la Comunicación No Violenta de Marshall Rosenberg</p>
+        <h1>🎲 Conecta con la Vida 🎲</h1>
+        <p>Inspirado en la Comunicación No Violenta (CNV) de Marshall Rosenberg</p>
     </header>
 
     <main>
-        <!-- SECCIÓN DE CONFIGURACIÓN -->
+        <!-- CONFIGURACIÓN -->
         <section id="configuracion">
         <h2>Configuración del Juego</h2>
         <form id="form-jugadores">
-            <label for="num-jugadores">Número de jugadores:</label>
+            <label for="num-jugadores">Número de jugadores (2 a 6):</label>
             <select id="num-jugadores" required>
             <option value="" disabled selected>Selecciona</option>
-            <option value="1">1</option>
             <option value="2">2</option>
             <option value="3">3</option>
             <option value="4">4</option>
@@ -33,6 +33,7 @@
 
         <!-- TABLERO -->
         <section id="tablero-section" aria-label="Tablero de juego" class="oculta">
+        <h2>🌀 Tablero de Juego</h2>
         <div id="tablero"></div>
         </section>
 
@@ -45,10 +46,11 @@
         <p id="resultado-dado"></p>
         </aside>
 
-        <!-- CARTAS -->
+        <!-- CARTAS DE DESAFÍO -->
         <section id="carta-section" aria-label="Cartas de desafío" class="oculta">
-        <h2>Carta de Desafío</h2>
+        <h2>Cartas CNV</h2>
         <div id="carta" class="oculta"></div>
+        <button id="mostrar-respuesta" class="oculta">Mostrar respuesta</button>
         <button id="siguiente-turno" class="oculta">Siguiente turno</button>
         </section>
 
@@ -57,21 +59,39 @@
         <h2>📖 Instrucciones del Juego</h2>
         <button id="toggle-instrucciones">Mostrar / Ocultar</button>
         <div id="texto-instrucciones" class="oculta">
-            <p>Objetivo: Lograr las 4 “Conexiones de Vida” practicando los pasos de la Comunicación No Violenta (CNV): observar sin juzgar, expresar sentimientos, reconocer necesidades y hacer peticiones claras.</p>
+            <h3>🎯 Objetivo</h3>
+            <p>Aprender y practicar los principios de la Comunicación No Violenta (CNV): observar sin juzgar, expresar sentimientos, reconocer necesidades y hacer peticiones claras, evitando los bloqueos de la compasión.</p>
+
+            <h3>⚙️ Reglas</h3>
+            <ol>
+            <li>Todos colocan su ficha en la casilla inicial “Dar desde el corazón”.</li>
+            <li>En cada turno, un jugador lanza el dado y avanza su ficha.</li>
+            <li>Según el color de la casilla, toma una carta del mazo correspondiente.</li>
+            <li>Lee la carta y responde el desafío:
+                <ul>
+                <li>Si responde correctamente, gana una “semilla de compasión”.</li>
+                <li>Al tener una de cada color (4), gana una “Conexión de Vida”.</li>
+                </ul>
+            </li>
+            <li>Si cae en una casilla negra 🖤, debe reformular una frase CNV para no perder turno.</li>
+            <li>Gana quien logra 4 Conexiones de Vida.</li>
+            </ol>
+
+            <h3>💚 💙 💛 ❤️ 🖤 Colores del Tablero</h3>
             <ul>
-            <li>Cada jugador lanza el dado en su turno y avanza su ficha.</li>
-            <li>Según el color de la casilla, tomará una carta de desafío correspondiente.</li>
-            <li>Si responde correctamente, gana una semilla de compasión.</li>
-            <li>Al reunir las 4 semillas, obtiene una Conexión de Vida.</li>
-            <li>El primer jugador con 4 Conexiones de Vida gana.</li>
+            <li>💚 Observa sin Juzgar</li>
+            <li>💙 Expresa tu Sentir</li>
+            <li>💛 Reconoce la Necesidad</li>
+            <li>❤️ Haz una Petición Clara</li>
+            <li>🖤 Bloqueo de la Compasión</li>
             </ul>
-            <p>Casillas especiales 🖤 “Bloqueo de la Compasión”: el jugador debe reformular una frase en lenguaje CNV para no perder turno.</p>
         </div>
         </section>
     </main>
 
     <footer>
-        <p>Juego educativo inspirado en la Comunicación No Violenta © 2025</p>
+        <p>Universidad del Valle de Guatemala, IA3036 Negociación de Conflictos © 2025</p>
+        <p>María José Girón Isidro, 23559<br>Leonardo Dufrey Mejía Mejía, 23648</p>
     </footer>
 
     <script src="script.js"></script>
